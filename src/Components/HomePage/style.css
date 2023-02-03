@@ -255,8 +255,8 @@
 }
 .home-section-6{
     transform: scale(1.5);
-    padding-bottom: 2rem;
-    padding-top: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 }
 /* .home-section-6{
     position: absolute;
@@ -465,6 +465,38 @@
 .full-content-para{
     font-weight: 400;
 }
+
+
+
+.page4_pc{
+    display: block;
+}
+
+.page4_mobile{
+    display: none;
+}
+
+
+
+@media(max-width:1200px){
+    .tokenomics-section {
+        display: flex;
+        align-items: center;
+        padding: 5em 4% !important;
+    }
+
+
+    
+    .page4_pc{
+        display: none ;
+    }
+
+    .page4_mobile{
+        display: block;
+    }
+}
+
+
 @media (min-width: 50em){
     .grid-box{
         grid-template-areas:
@@ -478,8 +510,12 @@
         align-items: center;
         padding: 5em 10em;
     }
+
+
+
+
     .content-wrapper{
-        padding: 3rem 15rem;
+        padding: 3rem 4rem;
         height: 35em;
     }
     .align-center{
@@ -495,24 +531,26 @@
         background-repeat: no-repeat;
     }
     .full-content-1{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 0.8fr 1fr;
         padding: 3em 3em;
         margin-left: 0;
         margin-right: auto;
         margin-bottom: 3em;
     }
     .token-icon{
-        transform: scale(3);
         width: 50%;
+        height: auto;
     }
     .full-content-1 h2{
         font-size: 20px;
     }
     .full-content-1 p{
         font-size: 16px;
+        font-weight: 300;
     }
     .full-content-para{
         font-size: 16px;
+        margin-top: 16px;
     }
     .flex{
         flex-direction: row;

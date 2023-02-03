@@ -169,7 +169,7 @@ export default function HomePage(props) {
                 </div>
 
             </div>
-            <div className='position-relative p4' ref={page4}>
+            <div className='position-relative p4 page4_pc' ref={page4} >
                 <div className="bg-page4">
                     <div className="container tokenomics-section">
                             <div className="content-wrapper">
@@ -278,6 +278,66 @@ export default function HomePage(props) {
                     </div>
                 </div>
             </div>
+
+
+
+            <div className='position-relative p4 page4_mobile' ref={page4} >
+                <div className="bg-page4">
+                    <div className="container tokenomics-section">
+                            <div className="content-wrapper">
+                                <h1>Tokenomics</h1>
+                               <div className='grid-box'>
+                                    <div className='box box-1'>
+                                        <Binance className='icon-center' />
+                                        <div className='main-content'>
+                                            <div>
+                                                <h2>Buy:</h2>
+                                                <p>Total tax 10% </p>
+                                            </div>
+                                            <div>
+                                                <h2>Sell:</h2>
+                                                <p>Total tax 21% </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='box box-2'>
+
+                                        <BuySell className='icon-center' />
+                                        <div className='main-content'>
+                                            <div>
+                                                <h2>Buy/Sell:</h2>
+                                                <p>3% BUSD rewards</p>
+                                            </div>
+                                            <div>
+                                                <h2>Liquidity:</h2>
+                                                <p>3% liquidity pool</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='box box-3'>
+                                        <EthereumCoin className='icon-center' />
+                                        <div className='main-content'>
+
+                                            <div>
+                                                <h2>Buy:</h2>
+                                                <p>7% cake staking pool</p>
+                                            </div>
+                                            <div>
+                                                <h2>Sell:</h2>
+                                                <p>15% cake staking pool</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
             <div className="position-relative p5" ref={page5}>
                 <div className="bg-footer  container_relative">
                     <div className="container ">
