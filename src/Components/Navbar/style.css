@@ -92,6 +92,10 @@
       box-shadow: 0 0 0.75em rgb(0, 0, 0, 0.05);
       z-index: 6;
     }
+
+    .logo{
+      color: #fff !important;
+    }
   
     .primary-header[data-overlay]::before {
       content: "";

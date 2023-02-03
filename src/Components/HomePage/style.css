@@ -254,8 +254,9 @@
     position: relative;
 }
 .home-section-6{
-    transform: scale(1.5) translate(40px, 50px);
-    max-width: min(100%, 50vw);
+    transform: scale(1.5);
+    padding-bottom: 2rem;
+    padding-top: 2rem;
 }
 /* .home-section-6{
     position: absolute;
