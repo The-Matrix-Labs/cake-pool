@@ -83,6 +83,11 @@
       border-radius: 0;
       padding: 0.5em 1em;
     }
+    .nav-list :hover,
+    .nav-list :focus {
+      color: #007381;
+      font-weight: bold;
+    }
     .primary-navigation {
       display: none;
       position: fixed;
