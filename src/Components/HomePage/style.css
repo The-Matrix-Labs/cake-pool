@@ -37,23 +37,23 @@
     }
 }
 .button{
+    font-family: 'Montserrat';
     font-size: 14px;
     padding: 1em 2em;
 }
 .btn-secondary{
-    background: none;
+    font-family: 'Montserrat';
+    margin-left: 1.5rem;
     color: #61ecff;
     box-shadow: inset 0 0 0 3px currentColor;
-    margin-left: 1.5rem;
-    cursor: pointer;
-    text-decoration: none;
     border: 0;
     border-radius: 10px;
     padding: 1em 2em;
-    font-weight: var(--fw-bold);
+    font-weight: 600;
     font-size: 14px;
     line-height: 1;
-                
+    background-color: transparent;
+    cursor: pointer;
 }
 .button-grp{
     margin-top: 2rem;
@@ -386,6 +386,7 @@
     border-radius: 20px;
     display: grid;
     gap: 2rem;
+    text-align: center;
 }
 .full-content-1{
     height: 100%;
@@ -466,7 +467,7 @@
     font-weight: 400;
 }
 
-
+/* 
 
 .page4_pc{
     display: block;
@@ -474,7 +475,7 @@
 
 .page4_mobile{
     display: none;
-}
+} */
 
 
 
@@ -483,16 +484,6 @@
         display: flex;
         align-items: center;
         padding: 5em 4% !important;
-    }
-
-
-    
-    .page4_pc{
-        display: none ;
-    }
-
-    .page4_mobile{
-        display: block;
     }
 }
 

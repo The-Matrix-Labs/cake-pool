@@ -6,8 +6,8 @@
 }
 
 @media(min-width: 50em){
-    .panda2Lottie img{
-        transform: scaleX(1);
+    .panda2Lottie{
+        transform: scaleX(1) scale(1.5);
     }
     .panda3Lottie{
         width: 50%;

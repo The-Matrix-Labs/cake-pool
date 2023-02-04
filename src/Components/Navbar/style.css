@@ -7,7 +7,10 @@
     position: sticky;
     top: 0;
   }
-  
+  .primary-navigation a{
+    text-decoration: none;
+    color: white;
+  }
   .nav-wrapper {
     padding: 1em 4em;
     display: flex;
@@ -36,7 +39,8 @@
   
   .nav-list :hover,
   .nav-list :focus {
-    color: black;
+    color: #007381;
+    font-weight: bold;
   }
   .logo{
     display: flex;
@@ -135,4 +139,12 @@
 
   }
 
- 
+ .no-style{
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+ }

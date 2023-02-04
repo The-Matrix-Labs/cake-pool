@@ -2,13 +2,7 @@ import React, { useEffect, useMemo, useRef } from 'react'
 import './style.css'
 export default function LoadingPage(props) {
   function handleOnClick() {
-    let pageHeight = window.innerHeight;
-    var i = 10;
-    var int = setInterval(function () {
-      document.body.scrollTo(0, i);
-      i += 10;
-      if (i >= pageHeight*1.2) clearInterval(int);
-    }, 1);
+    props.setscrollTo(true);
   }
   const page0 = useRef();
   const options = useMemo(() => ({

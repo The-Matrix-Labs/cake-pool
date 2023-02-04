@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, useMemo } from 'react'
+import React, { useEffect, useRef, useMemo } from 'react'
 import './style.css'
 import { ReactComponent as Community1 } from '../assets/images/community1.svg';
 import { ReactComponent as Reward } from '../assets/images/reward.svg';
@@ -18,7 +18,6 @@ import { ReactComponent as Telegram1 } from '../assets/images/telegram1.svg';
 import { ReactComponent as Telegram2 } from '../assets/images/telegram2.svg';
 import { Lottie1, Lottie2, Lottie3 } from '../Lottie';
 import trdd2 from '../assets/images/Ellipse6.png';
-import trdd from '../assets/images/5300_2_02-ai 1.png';
 export default function HomePage(props) {
     const page1 = useRef();
     const page2 = useRef();
@@ -35,7 +34,22 @@ export default function HomePage(props) {
         let temppage2 = null;
         let temppage3 = null;
         let temppage4 = null;
-        
+        if(props.about === true){
+            page1.current.scrollIntoView()
+            props.setabout(false);
+        }
+        if(props.tokenomics === true){
+            page4.current.scrollIntoView()
+            props.settokenomics(false);
+        }
+        if(props.future === true){
+            page5.current.scrollIntoView()
+            props.setfuture(false);
+        }
+        if(props.scrollTo){
+            page1.current.scrollIntoView();
+            props.setscrollTo(false);
+        }
         const observer = new IntersectionObserver(function
             (entries, observer) {
                 entries.forEach(entry => {
@@ -94,19 +108,6 @@ export default function HomePage(props) {
       }
     }, [page1, page2, page3, page4, page5, options, props]);
     
-    const [contentNum, setcontentNum] = useState(0);
-    function showAll(){
-        setcontentNum(0);
-    }
-    function showBox1(){
-        setcontentNum(1);
-    }
-    function showBox2(){
-        setcontentNum(2);
-    }
-    function showBox3(){
-        setcontentNum(3);
-    }
     return (
         <>
             <div className="position-relative p1" ref={page1}>
@@ -169,119 +170,7 @@ export default function HomePage(props) {
                 </div>
 
             </div>
-            <div className='position-relative p4 page4_pc' ref={page4} >
-                <div className="bg-page4">
-                    <div className="container tokenomics-section">
-                            <div className="content-wrapper">
-                                <h1>Tokenomics</h1>
-                                {(contentNum === 0)?<div className='grid-box'>
-                                    <div className='box box-1' onMouseEnter={showBox1}>
-                                        <Binance className='icon-center' />
-                                        <div className='main-content'>
-                                            <div>
-                                                <h2>Buy:</h2>
-                                                <p>Total tax 10% </p>
-                                            </div>
-                                            <div>
-                                                <h2>Sell:</h2>
-                                                <p>Total tax 21% </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className='box box-2' onMouseEnter={showBox2}>
-
-                                        <BuySell className='icon-center' />
-                                        <div className='main-content'>
-                                            <div>
-                                                <h2>Buy/Sell:</h2>
-                                                <p>3% BUSD rewards</p>
-                                            </div>
-                                            <div>
-                                                <h2>Liquidity:</h2>
-                                                <p>3% liquidity pool</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className='box box-3' onMouseEnter={showBox3}>
-                                        <EthereumCoin className='icon-center' />
-                                        <div className='main-content'>
-
-                                            <div>
-                                                <h2>Buy:</h2>
-                                                <p>7% cake staking pool</p>
-                                            </div>
-                                            <div>
-                                                <h2>Sell:</h2>
-                                                <p>15% cake staking pool</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                :
-                                (contentNum===1)?<div className="full-content-1" onMouseLeave={showAll}>
-                                    <Binance className='token-icon'/>
-                                    <div className='full-content-text'>
-                                    <div className='full-content-main'>
-                                        <div className='flex'>
-                                            <h2>Buy:</h2>
-                                            <p> Total tax 10% </p>
-                                        </div>
-                                        <div className='flex'>
-                                            <h2>Sell:</h2>
-                                            <p> Total tax 21% </p>
-                                        </div>
-                                    </div>
-                                    <div className='full-content-para'>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae.</p>
-                                    </div>
-                                    </div>
-                                </div>
-                                :(contentNum===2)?
-                                <div className="full-content-1" onMouseLeave={showAll}>
-                                    <BuySell className='token-icon' />
-                                    <div className='full-content-text'>
-                                    <div className='full-content-main'>
-                                            <div className='flex'>
-                                                <h2>Buy/Sell:</h2>
-                                                <p>3% BUSD rewards</p>
-                                            </div>
-                                            <div className='flex'>
-                                                <h2>Liquidity:</h2>
-                                                <p>3% liquidity pool</p>
-                                            </div>
-                                    </div>
-                                    <div className='full-content-para'>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae.</p>
-                                    </div>
-                                    </div>
-                                </div>:
-                                <div className="full-content-1" onMouseLeave={showAll}>
-                                <EthereumCoin className='token-icon' />
-                                <div className='full-content-text'>
-                                <div className='full-content-main'>
-                                    <div className='flex'>
-                                        <h2>Buy:</h2>
-                                        <p>7% cake staking pool</p>
-                                    </div>
-                                    <div className='flex'>
-                                        <h2>Sell:</h2>
-                                        <p>15% cake staking pool</p>
-                                    </div>
-                                </div>
-                                <div className='full-content-para'>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae.</p>
-                                </div>
-                                </div>
-                            </div>}
-                                
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <div className='position-relative p4 page4_mobile' ref={page4} >
+            <div className='position-relative p' ref={page4} >
                 <div className="bg-page4">
                     <div className="container tokenomics-section">
                             <div className="content-wrapper">
@@ -291,11 +180,11 @@ export default function HomePage(props) {
                                         <Binance className='icon-center' />
                                         <div className='main-content'>
                                             <div>
-                                                <h2>Buy:</h2>
+                                                <h2>Buy</h2>
                                                 <p>Total tax 10% </p>
                                             </div>
                                             <div>
-                                                <h2>Sell:</h2>
+                                                <h2>Sell</h2>
                                                 <p>Total tax 21% </p>
                                             </div>
                                         </div>
@@ -305,11 +194,11 @@ export default function HomePage(props) {
                                         <BuySell className='icon-center' />
                                         <div className='main-content'>
                                             <div>
-                                                <h2>Buy/Sell:</h2>
+                                                <h2>Buy/Sell</h2>
                                                 <p>3% BUSD rewards</p>
                                             </div>
                                             <div>
-                                                <h2>Liquidity:</h2>
+                                                <h2>Liquidity</h2>
                                                 <p>3% liquidity pool</p>
                                             </div>
                                         </div>
@@ -319,11 +208,11 @@ export default function HomePage(props) {
                                         <div className='main-content'>
 
                                             <div>
-                                                <h2>Buy:</h2>
+                                                <h2>Buy</h2>
                                                 <p>7% cake staking pool</p>
                                             </div>
                                             <div>
-                                                <h2>Sell:</h2>
+                                                <h2>Sell</h2>
                                                 <p>15% cake staking pool</p>
                                             </div>
                                         </div>
