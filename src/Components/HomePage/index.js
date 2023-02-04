@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useMemo } from 'react'
+import React, { useEffect, useRef, useMemo, useState } from 'react'
 import './style.css'
 import { ReactComponent as Community1 } from '../assets/images/community1.svg';
 import { ReactComponent as Reward } from '../assets/images/reward.svg';
@@ -18,7 +18,10 @@ import { ReactComponent as Telegram1 } from '../assets/images/telegram1.svg';
 import { ReactComponent as Telegram2 } from '../assets/images/telegram2.svg';
 import { Lottie1, Lottie2, Lottie3 } from '../Lottie';
 import trdd2 from '../assets/images/Ellipse6.png';
+import trdd1 from '../assets/images/Ellipse6-mobile.png';
 export default function HomePage(props) {
+    const temp = window.innerWidth >= 800 ? trdd2: trdd1;
+    const [footerBackground, setfooterBackground] = useState(temp);
     const page1 = useRef();
     const page2 = useRef();
     const page3 = useRef();
@@ -107,6 +110,20 @@ export default function HomePage(props) {
 
       }
     }, [page1, page2, page3, page4, page5, options, props]);
+    useEffect(() => {
+    function handleResize(){
+        if(window.innerWidth <= 800){
+          setfooterBackground(trdd1)
+        }
+        else{
+          setfooterBackground(trdd2)
+        }
+    }
+      window.addEventListener('resize', handleResize);
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      }
+    }, [])
     
     return (
         <>
@@ -247,7 +264,7 @@ export default function HomePage(props) {
                                     </div>
                                 </div>
                                 {/* <img src={trdd} alt=""/> */}
-                                <Lottie3 className='home-section-2-lottie'/>
+                                <Lottie3 className='home-section-2-lottie footer-lottie'/>
 
 
                             </div>
@@ -273,7 +290,7 @@ export default function HomePage(props) {
                         </footer>
 
                     </div>
-                    <img alt="" src={trdd2} className="curve_footer" />
+                    <img alt="" src={footerBackground} className="curve_footer" />
 
                 </div>
 

@@ -3,6 +3,7 @@
 }
 .panda3Lottie{
     max-width: 100%;
+    transform: translateX(15vw);
 }
 
 @media(min-width: 50em){
@@ -13,5 +14,7 @@
         width: 50%;
         height: 100%;
         max-width: 100%;
+        transform: translateX(0);
+        
     }
 }
