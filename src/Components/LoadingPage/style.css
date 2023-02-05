@@ -24,6 +24,16 @@
     background-size: 40%;
 
 }
+@media (min-width: 2000px){
+    .primary-content::before{
+        background-size: 35%;
+    }
+}
+@media (min-width: 2400px){
+    .primary-content::before{
+        background-size: 30%;
+    }
+}
 .word{
     display: flex;
     gap: 1rem;

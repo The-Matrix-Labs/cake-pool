@@ -88,7 +88,7 @@ export default function Navbar(props) {
               <ul className='social-icon-list-nav toggleDisplay2'>
               <li><a href="https://t.me/CakePool"><Telegram2 className='nav-icon' fill={textColor}/></a></li>
                                 <li><a href="https://twitter.com/CakePoolTweets"><Twitter2 className='nav-icon' fill={textColor}/></a></li>
-                                <li><a href="https://discord.com/invite/XdacqRMKbq"><Discord2 className='nav-icon' fill={textColor}/></a></li>
+                                <li><a href="https://discord.com/invite/3CHP5pYcZx"><Discord2 className='nav-icon' fill={textColor}/></a></li>
               </ul>
               
             </nav>
