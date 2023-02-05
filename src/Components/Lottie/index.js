@@ -2,8 +2,8 @@ import React, {useEffect, useRef} from 'react'
 import lottie from 'lottie-web'
 import './style.css';
 
-export  function Lottie1() {
-    const lot = useRef()
+export  function Lottie1(props) {
+  const lot = useRef()
   useEffect(()=>{
     const instance = lottie.loadAnimation({
         container: lot.current,
@@ -12,8 +12,15 @@ export  function Lottie1() {
         loop: true,
         animationData: require('../assets/images/PandaLottie.json'),
     });
+    console.log(props.onLogo)
+    if(props.onLogo){
+      lot.current.classList.add('on-logo')
+    }
+    else{
+      lot.current.classList.remove('on-logo')
+    }
     return () => instance.destroy();
-  }, [])
+  }, [props.onLogo])
   return (
     <div ref={lot} className="pandaLottie"></div>
   )

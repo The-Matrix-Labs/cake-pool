@@ -5,9 +5,12 @@
     max-width: 100%;
     transform: translateX(15vw);
 }
-
+.on-logo{
+    transform: scale(0.5);
+}
 @media(min-width: 50em){
     .panda2Lottie{
+        max-width: 500px;
         transform: scaleX(1) scale(1.5);
     }
     .panda3Lottie{

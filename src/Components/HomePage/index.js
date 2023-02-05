@@ -29,8 +29,8 @@ export default function HomePage(props) {
     const page5 = useRef();
     const options = useMemo(() => ({
         root: null,
-        threshold: 0.1,
-        rootMargin: "-220px"
+        threshold: 0.5,
+        rootMargin: "0px"
         }), []);
     useEffect(() => {
         let temppage1 = null;
@@ -257,9 +257,9 @@ export default function HomePage(props) {
                                             <li><a href="https://www.instagram.com/cakepoolstaking/"><Instagram1 /></a></li>
                                             <li><a href="https://www.tiktok.com/@cakepoolstaking"><Tiktok1 /></a></li>
                                             <li><a href="https://www.reddit.com/r/CakePool/"><Reddit1 /></a></li>
-                                            <li><a href="https://twitter.com/CakePoolTweets"><Twitter1 /></a></li>
-                                            <li><a href="https://t.me/CakePool"><Telegram1 /></a></li>
-                                            <li><a href="https://discord.com/invite/XdacqRMKbq"><Discord1 /></a></li>
+                                            <li><a href="https://twitter.com/CakePoolTweets"><Twitter1 fill={"#00A9BE"}/></a></li>
+                                            <li><a href="https://t.me/CakePool"><Telegram1 fill={"#00A9BE"}/></a></li>
+                                            <li><a href="https://discord.com/invite/XdacqRMKbq"><Discord1 fill={"#00A9BE"}/></a></li>
                                         </ul>
                                     </div>
                                 </div>

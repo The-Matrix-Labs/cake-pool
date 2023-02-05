@@ -2,6 +2,9 @@ import React, { useEffect, useRef, useState} from 'react'
 import './style.css'
 import {ReactComponent as Menu} from '../assets/images/icon-hamburger.svg'
 import {ReactComponent as CloseIcon} from '../assets/images/icon-close.svg'
+import { ReactComponent as Telegram2 } from '../assets/images/telegram1.svg';
+import { ReactComponent as Discord2 } from '../assets/images/discord1.svg'
+import { ReactComponent as Twitter2 } from '../assets/images/twitter1.svg';
 
 export default function Navbar(props) {
   const [menu, setmenu] = useState(false);
@@ -26,6 +29,7 @@ export default function Navbar(props) {
     const primaryNav = document.querySelector(".primary-navigation");
     const primaryHeader = document.querySelector(".primary-header");
     const primaryButton = document.querySelector(".toggleDisplay");
+    const primarySocialIcon = document.querySelector(".toggleDisplay2");
     if(menu){
       setmenu(false);
     }
@@ -34,6 +38,7 @@ export default function Navbar(props) {
     }
     primaryNav.toggleAttribute("data-visible");
     primaryButton.toggleAttribute("data-visible");
+    primarySocialIcon.toggleAttribute("data-visible");
     primaryHeader.toggleAttribute("data-overlay");  
   }
   function showAbout(){
@@ -58,8 +63,8 @@ export default function Navbar(props) {
         <div className="container mobile-width">
           <div className="nav-wrapper" id='nav-wrapper' ref={myNav}>
             <div className="logo" ref={myLogo}>
-              <img src={require('../assets/images/logo1.png')} alt="Manage" />
-              <p>Cakepool</p>
+              <img src={require('../assets/images/4500_6_06-ai-2.png')} alt="Manage" />
+              <p>Cake Pool</p>
             </div>
             {menu?<button onClick={toggleIcon} className="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
               
@@ -78,8 +83,14 @@ export default function Navbar(props) {
                 <li><button onClick={showTokenomics} className='no-style'> Tokenomics</button></li>
                 <li><button onClick={showFuture} className='no-style'> Future</button></li>
                 <li><a href='https://whitepaper.cakepool.net/' alt='' ref={myLink}> WhitePaper</a></li>
-                <li className='toggleDisplay'><button  className="button">Buy Now</button></li>
+                <li className='toggleDisplay'><button  className="button btn-mobile">Buy Now</button></li>
               </ul>
+              <ul className='social-icon-list-nav toggleDisplay2'>
+              <li><a href="https://t.me/CakePool"><Telegram2 className='nav-icon' fill={textColor}/></a></li>
+                                <li><a href="https://twitter.com/CakePoolTweets"><Twitter2 className='nav-icon' fill={textColor}/></a></li>
+                                <li><a href="https://discord.com/invite/XdacqRMKbq"><Discord2 className='nav-icon' fill={textColor}/></a></li>
+              </ul>
+              
             </nav>
             <button  className="button display-sm-hidden display-md-inline-flex">Buy Now</button>
           </div>
