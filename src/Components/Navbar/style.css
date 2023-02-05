@@ -22,12 +22,15 @@
     justify-content: space-between;
     align-items: center;
     border-radius: 30px;
+    transition: 0.5s;
   }
   
   .mobile-nav-toggle {
     display: none;
   }
-  
+  .mobile-visible{
+    display: none;
+  }
   .nav-list {
     display: flex;
     font-size: 16px;
@@ -91,13 +94,19 @@
       padding-top: 0;
       top: 0;
     }
+    .mobile-visible{
+      display: block;
+    }
+    .logo{
+      display: none;
+    }
     .mobile-width{
       width: 100% !important;
     }
     .nav-wrapper{
       background-color: #00A9BE !important;
       border-radius: 0;
-      padding: 0.5em 1em;
+      padding: 0.25em 1em;
     }
     .nav-list :hover,
     .nav-list :focus {

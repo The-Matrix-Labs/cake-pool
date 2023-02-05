@@ -16,6 +16,8 @@ import { ReactComponent as Twitter2 } from '../assets/images/twitter2.svg';
 import { ReactComponent as Tiktok1 } from '../assets/images/tiktok1.svg';
 import { ReactComponent as Telegram1 } from '../assets/images/telegram1.svg';
 import { ReactComponent as Telegram2 } from '../assets/images/telegram2.svg';
+import {ReactComponent as Logo} from '../assets/images/logo-grp.svg';
+
 import { Lottie1, Lottie2, Lottie3 } from '../Lottie';
 import trdd2 from '../assets/images/Ellipse6.png';
 import trdd1 from '../assets/images/Ellipse6-mobile.png';
@@ -263,7 +265,7 @@ export default function HomePage(props) {
                                             <li><a href="https://www.reddit.com/r/CakePool/"><Reddit1 /></a></li>
                                             <li><a href="https://twitter.com/CakePoolTweets"><Twitter1 fill={"#00A9BE"} /></a></li>
                                             <li><a href="https://t.me/CakePool"><Telegram1 fill={"#00A9BE"} /></a></li>
-                                            <li><a href="https://discord.com/invite/XdacqRMKbq"><Discord1 fill={"#00A9BE"} /></a></li>
+                                            <li><a href="https://discord.com/invite/3CHP5pYcZx"><Discord1 fill={"#00A9BE"} /></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -283,12 +285,13 @@ export default function HomePage(props) {
                                 <img src={require('../assets/images/4500_6_06-ai-2.png')} alt="Manage" />
                                 <p>Cake Pool</p>
                             </div>
+                            <Logo className='mobile-visible'/>
                             <ul className="social-icon-list">
 
                                 <li><a href="https://t.me/CakePool"><Telegram2 className='bottom-icon' /></a></li>
                                 <li><a href="https://twitter.com/CakePoolTweets"><Twitter2 className='bottom-icon' /></a></li>
                                 <li><a href="https://www.reddit.com/r/CakePool/"><Reddit2 className='bottom-icon' /></a></li>
-                                <li><a href="https://discord.com/invite/XdacqRMKbq"><Discord2 className='bottom-icon' /></a></li>
+                                <li><a href="https://discord.com/invite/3CHP5pYcZx"><Discord2 className='bottom-icon' /></a></li>
 
                             </ul>
                         </footer>
