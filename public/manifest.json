@@ -3,17 +3,17 @@
   "name": "Cake Pool",
   "icons": [
     {
-      "src": "logo1.png",
+      "src": "logo.png",
       "sizes": "64x64",
       "type": "image/png"
     },
     {
-      "src": "logo1.png",
+      "src": "logo.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo1.png",
+      "src": "logo.png",
       "type": "image/png",
       "sizes": "512x512"
     }
